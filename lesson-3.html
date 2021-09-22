@@ -7,6 +7,71 @@
 <body>
 <script>
 
+    // Задание №1
+
+    var x = 2;
+
+    function isPrime(num) {
+        var i = 2;
+        while(i < num / 2) {
+            if(num % i == 0) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    }
+    while(x<=100) {
+        if(isPrime(x)){
+            console.log(x)
+        }
+        x++;
+    }
+
+    // Задание №2+3
+
+    var basket = [
+        {
+            title: "Автобиография",
+            author: "Иванов Иван",
+            price: 1450,
+            count: 3,
+        },
+        {
+            title: "Автобиография",
+            author: "Иванов Иван",
+            price: 970,
+            count: 6,
+        },
+        {
+            title: "Автобиография",
+            author: "Иванов Иван",
+            price: 1710,
+            count: 1,
+        }
+    ];
+
+    function countBasketPrice(arr) {
+        var basketSum = 0;
+        for(var item of arr){
+            basketSum +=(item.price * item.count);
+        }
+        return basketSum;
+    }
+    console.log(countBasketPrice(basket));
+
+    // Задание №4
+
+    for(var i = 0; i <= 9; document.write(i++ + "")){};
+
+    // Задание №5
+
+    var p = "";
+    for(i = 0; i <= 20; i++) {
+        p+="x";
+        console.log(p);
+    }
+
 </script>
 </body>
 </html>
